@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap" rel="stylesheet">
+    <title>Integrales Definidas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="formulario" class="form">
+        <fieldset>
+            <legend>Detalles de la integral Definida</legend>
+            <label>
+                Función:
+                <input type="text" list="functions" placeholder="--Options--" id="options">
+            </label>
+            <datalist id="functions" >
+                <option value="Sin(x)" />
+                <option value="Cos(x)" />
+                <option value="Tan(x)" />
+                <option value="x" />
+                <option value="x^2" />
+                <option value="x^3" />
+                <option value="x^4" />
+            </datalist>
+            <label>
+                Indice Inferior:
+                <input type="number" id="indice-inferior" placeholder="Inferior">
+            </label>
+            <label>
+                Indice Superior:
+                <input type="number" id="indice-superior" placeholder="Superior">
+            </label>
+        </fieldset>
+        <button type="button" id="button" >Resolver Integral</button>
+    </form>
+    <p class="result">
+        Result: <span id="result" > </span>
+    </p>
+    <script src="./solver.js"></script>
+</body>
+</html>
