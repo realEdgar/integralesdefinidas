@@ -7,6 +7,7 @@ accionador.addEventListener('click', resolverIntegral);
 for(let i = 0; i < entradas.length; i++) {
     entradas[i].addEventListener('change', leerEntradas);
 }
+
 // Variables donde se guardaran los valores de los inputs
 let funcion;
 let indiceInferior;
@@ -25,59 +26,59 @@ function leerEntradas(ev) {
 }
 
 function resolverIntegral(ev) {
-    const width = 0.0001;
+    const ancho = 0.0001;
     let area = 0;
     switch(funcion) {
         case 'Sin(x)':
-            for(let i = indiceInferior; i <= indiceSuperior; i += width) {
-                let height = Math.sin(i);
-                area += width * height;
+            for(let i = indiceInferior; i <= indiceSuperior; i += ancho) {
+                let alto = Math.sin(i);
+                area += ancho * alto;
             }
             salida.innerHTML = area.toFixed(4);
         break;
         case 'Cos(x)':
-            for(let i = indiceInferior; i <= indiceSuperior; i += width) {
-                let height = Math.cos(i);
-                area += width * height;
+            for(let i = indiceInferior; i <= indiceSuperior; i += ancho) {
+                let alto = Math.cos(i);
+                area += ancho * alto;
             }
             salida.innerHTML = area.toFixed(4);
         break;
         case 'Tan(x)':
-            for(let i = indiceInferior; i <= indiceSuperior; i += width) {
-                let height = Math.tan(i);
-                area += width * height;
+            for(let i = indiceInferior; i <= indiceSuperior; i += ancho) {
+                let alto = Math.tan(i);
+                area += ancho * alto;
             }
             salida.innerHTML = area.toFixed(4);
         break;
         case 'x':
-            for(let i = indiceInferior; i <= indiceSuperior; i += width) {
-                let height = i;
-                area += width * height;
+            for(let i = indiceInferior; i <= indiceSuperior; i += ancho) {
+                let alto = i;
+                area += ancho * alto;
             }
             salida.innerHTML = area.toFixed(4);
         break;
         case 'x^2':
-            for(let i = indiceInferior; i <= indiceSuperior; i += width) {
-                let height = i**2;
-                area += width * height;
+            for(let i = indiceInferior; i <= indiceSuperior; i += ancho) {
+                let alto = i**2;
+                area += ancho * alto;
             }
             salida.innerHTML = area.toFixed(4);
         break;
         case 'x^3':
-            for(let i = indiceInferior; i <= indiceSuperior; i += width) {
-                let height = i**3;
-                area += width * height;
+            for(let i = indiceInferior; i <= indiceSuperior; i += ancho) {
+                let alto = i**3;
+                area += ancho * alto;
             }
             salida.innerHTML = area.toFixed(4);
         break;
         case 'x^4':
-            for(let i = indiceInferior; i <= indiceSuperior; i += width) {
-                let height = i**4;
-                area += width * height;
+            for(let i = indiceInferior; i <= indiceSuperior; i += ancho) {
+                let alto = i**4;
+                area += ancho * alto;
             }
             salida.innerHTML = area.toFixed(4);
         break;
         default:
-            alert('Opcion Invalida, preciona aceptar y eloge una de las opciones');
+            alert('Opcion Invalida, preciona OK y elige una de las opciones validas');
     }
 }
