@@ -25,7 +25,7 @@ function leerEntradas(ev) {
     }
 }
 
-function resolverIntegral(ev) {
+function resolverIntegral() {
     const ancho = 0.0001;
     let area = 0;
     switch(funcion) {
@@ -74,6 +74,13 @@ function resolverIntegral(ev) {
         case 'x^4':
             for(let i = indiceInferior; i <= indiceSuperior; i += ancho) {
                 let alto = i**4;
+                area += ancho * alto;
+            }
+            salida.innerHTML = area.toFixed(4);
+        break;
+        case 'e^x':
+            for(let i = indiceInferior; i <= indiceSuperior; i += ancho) {
+                let alto = Math.exp(i);
                 area += ancho * alto;
             }
             salida.innerHTML = area.toFixed(4);
