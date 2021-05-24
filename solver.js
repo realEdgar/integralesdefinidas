@@ -85,6 +85,20 @@ function resolverIntegral() {
             }
             salida.innerHTML = area.toFixed(4);
         break;
+        case 'Raiz(x)':
+            for(let i = indiceInferior; i <= indiceSuperior; i += ancho) {
+                let alto = Math.sqrt(i);
+                area += ancho * alto;
+            }
+            salida.innerHTML = area.toFixed(4);
+        break;
+        case 'RaizCubica(x)':
+            for(let i = indiceInferior; i <= indiceSuperior; i += ancho) {
+                let alto = Math.cbrt(i);
+                area += ancho * alto;
+            }
+            salida.innerHTML = area.toFixed(4);
+        break;
         default:
             alert('Opcion Invalida, preciona OK y elige una de las opciones validas');
     }
