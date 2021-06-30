@@ -129,6 +129,41 @@ function resolverIntegral() {
       }
       salida.innerHTML = area.toFixed(4);
     break;
+    case 'log(1 + x)':
+      for(let i = indiceInferior; i <= indiceSuperior; i += ancho) {
+        let alto = Math.log1p(i);
+        area += ancho * alto;
+      }
+      salida.innerHTML = area.toFixed(4);
+    break;
+    case 'xCos(x)':
+      for(let i = indiceInferior; i <= indiceSuperior; i += ancho) {
+        let alto = i*Math.cos(i);
+        area += ancho * alto;
+      }
+      salida.innerHTML = area.toFixed(4);
+    break;
+    case 'xSin(x)':
+      for(let i = indiceInferior; i <= indiceSuperior; i += ancho) {
+        let alto = i*Math.sin(i);
+        area += ancho * alto;
+      }
+      salida.innerHTML = area.toFixed(4);
+    break;
+    case 'x^2Cos(x)':
+      for(let i = indiceInferior; i <= indiceSuperior; i += ancho) {
+        let alto = (i**2)*Math.cos(i);
+        area += ancho * alto;
+      }
+      salida.innerHTML = area.toFixed(4);
+    break;
+    case 'x^2Sin(x)':
+      for(let i = indiceInferior; i <= indiceSuperior; i += ancho) {
+        let alto = (i**2)*Math.sin(i);
+        area += ancho * alto;
+      }
+      salida.innerHTML = area.toFixed(4);
+    break;
     default:
       alert('Opcion Invalida, preciona OK y elige una de las opciones validas');
     break;

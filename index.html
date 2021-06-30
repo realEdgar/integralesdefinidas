@@ -11,7 +11,7 @@
 <body>
     <form id="formulario" class="form">
         <fieldset>
-            <legend>Detalles de la integral Definida</legend>
+            <legend>Detalles de la integral</legend>
             <label>
                 Función:
                 <input type="text" list="functions" placeholder="--Options--" id="options" >
@@ -30,6 +30,10 @@
                 <option value="log(x)" />
                 <option value="log10(x)" />
                 <option value="log2(x)" />
+                <option value="xCos(x)" />
+                <option value="xSin(x)" />
+                <option value="x^2Cos(x)" />
+                <option value="x^2Sin(x)" />
             </datalist>
             <label>
                 Indice Inferior:
@@ -43,7 +47,8 @@
         <button type="button" id="button" >Resolver Integral</button>
     </form>
     <p class="result">
-        Result: <span id="result" ></span>
+        Resultado: <span id="result" ></span>
+        <span>u^2</span>
     </p>
     <script src="./solver.js"></script>
 </body>
